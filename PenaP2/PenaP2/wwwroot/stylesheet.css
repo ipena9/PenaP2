@@ -1,0 +1,54 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Agency FB;
+    font-size: 30px min-height:500%;
+    color: white;
+    background-color: #A99677;
+}
+
+header {
+    font-family: 'Agency FB';
+    font-size: 20px;
+    text-align: center;
+    background-image: url("space.jpg")
+}
+
+#maincontent {
+    height: 500px;
+}
+
+nav {
+    float: left;
+    height: 500px;
+    width: 180px;
+    /*padding: 5px;*/
+    vertical-align: top;
+    background-color: #F0EAD5;
+    color: white;
+}
+
+aside {
+    float: right;
+    height: 200px;
+    width: 200px;
+    background-color: #2E1614;
+}
+
+footer {
+    color: white;
+    background-color: #F0EAD5;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+    font-size: 20px;
+}
+
+header, #maincontent, nav, aside, footer {
+    padding: 5px;
+}

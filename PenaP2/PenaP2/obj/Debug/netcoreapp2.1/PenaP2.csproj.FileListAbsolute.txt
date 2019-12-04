@@ -1,0 +1,14 @@
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\bin\Debug\netcoreapp2.1\PenaP2.deps.json
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\bin\Debug\netcoreapp2.1\PenaP2.runtimeconfig.json
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\bin\Debug\netcoreapp2.1\PenaP2.runtimeconfig.dev.json
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\bin\Debug\netcoreapp2.1\PenaP2.dll
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\bin\Debug\netcoreapp2.1\PenaP2.pdb
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\obj\Debug\netcoreapp2.1\PenaP2.csprojAssemblyReference.cache
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\obj\Debug\netcoreapp2.1\PenaP2.csproj.CoreCompileInputs.cache
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\obj\Debug\netcoreapp2.1\PenaP2.RazorAssemblyInfo.cache
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\obj\Debug\netcoreapp2.1\PenaP2.RazorAssemblyInfo.cs
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\obj\Debug\netcoreapp2.1\PenaP2.AssemblyInfoInputs.cache
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\obj\Debug\netcoreapp2.1\PenaP2.AssemblyInfo.cs
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\obj\Debug\netcoreapp2.1\PenaP2.RazorTargetAssemblyInfo.cache
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\obj\Debug\netcoreapp2.1\PenaP2.dll
+C:\Users\bboyi\Desktop\dotNet\PenaP2\PenaP2\obj\Debug\netcoreapp2.1\PenaP2.pdb

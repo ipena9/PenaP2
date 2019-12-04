@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ellipse Builder</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+    <body>
+        <header>
+            <h1>Results</h1>
+            <style type="text/css">
+                section {
+                    font-family: Magneto;
+                    font-size: 25px;
+                    border-bottom: 2px;
+                    border-bottom-style: solid;
+                    border-bottom-color: #F0EAD5;
+                    background-color: #A99677;
+                }
+
+                ul {
+                    text-indent: 5px;
+                    list-style-position: inside;
+                    color: #877556;
+                    text-decoration: none;
+                }
+            </style>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="HomePage.html">Home Page</a></li>
+                <li><a href="GetForm.html">Ellipse Builder</a></li>
+            </ul>
+        </nav>
+
+        <div id="mainContent">
+            <aside>
+                <h2 style="font-size: 12px">EARTH!</h2>
+                <br />
+                <img alt="Picture of a Earth" src="earth.jpg" height="150" width="200" />
+            </aside>
+
+            <section>
+                <p>Major Axis:</p>
+                <p>Minor Axis:</p>
+                <canvas id="thecanvas" width="400" height="400"></canvas>
+
+                <script>
+                    //used the javascript demo as bass
+                    //function found at https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+                    function getParameterByName(name, url) {
+                        if (!url) url = window.location.href;
+                        name = name.replace(/[\[\]]/g, "\\$&");
+                        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                            results = regex.exec(url);
+                        if (!results) return null;
+                        if (!results[2]) return '';
+                        return decodeURIComponent(results[2].replace(/\+/g, " "));
+                    }
+
+                    var major = parseInt(getParameterByName("MajorAxis"));
+                    var minor = parseInt(getParameterByName("MinorAxis"));
+
+                    //taken from https://stackoverflow.com/questions/2172798/how-to-draw-an-oval-in-html5-canvas
+                    var canvas = document.getElementById('thecanvas');
+
+                    if (canvas.getContext) {
+                        var ctx = canvas.getContext('2d');
+                        drawEllipse(ctx, 10, 10, major, minor);
+                        //drawEllipseByCenter(ctx, 60,40,20,10);
+                    }
+
+                    function drawEllipseByCenter(ctx, cx, cy, major, minor) {
+                        drawEllipse(ctx, cx - w / 2.0, cy - h / 2.0, major, minor);
+                    }
+
+                    function drawEllipse(ctx, x, y, w, h) {
+                        var kappa = .5522848,
+                            ox = (w / 2) * kappa, // control point offset horizontal
+                            oy = (h / 2) * kappa, // control point offset vertical
+                            xe = x + w,           // x-end
+                            ye = y + h,           // y-end
+                            xm = x + w / 2,       // x-middle
+                            ym = y + h / 2;       // y-middle
+
+                        ctx.beginPath();
+                        ctx.moveTo(x, ym);
+                        ctx.bezierCurveTo(x, ym - oy, xm - ox, y, xm, y);
+                        ctx.bezierCurveTo(xm + ox, y, xe, ym - oy, xe, ym);
+                        ctx.bezierCurveTo(xe, ym + oy, xm + ox, ye, xm, ye);
+                        ctx.bezierCurveTo(xm - ox, ye, x, ym + oy, x, ym);
+                        //ctx.closePath(); // not used correctly, see comments (use to close off open path)
+                        ctx.stroke();
+                    }
+
+                </script>
+                <button onclick="window.location.href = 'GetForm.html'">NEW ELLIPSE</button>
+            </section>
+        </div>
+        <footer>
+            <a href=" https://www.mathsisfun.com/geometry/ellipse.html"> Fun with Ellipses</a>
+        </footer>
+    </body>
+</html>
