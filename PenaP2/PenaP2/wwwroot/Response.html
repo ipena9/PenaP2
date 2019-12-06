@@ -40,11 +40,16 @@
             </aside>
 
             <section>
-                <p>Major Axis:</p>
-                <p>Minor Axis:</p>
+                <p>
+                    Major Axis:<span id="MajorAxis"></span>
+                </p>
+                <p>
+                    Minor Axis:<span id="MinorAxis"></span>
+                </p>
                 <canvas id="thecanvas" width="400" height="400"></canvas>
 
                 <script>
+                    //document.getElementById("querystring").innerText = window.location.href;
                     //used the javascript demo as bass
                     //function found at https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
                     function getParameterByName(name, url) {
